@@ -28,7 +28,7 @@ This wraps the video(s) in a `div.fluid-width-video-wrapper` uses CSS to keep th
 Browser Support
 -------------
 
-Vanilla FitVids uses `document.querySelector` which is supported in newer browsers. According to [Can I Use...](http://caniuse.com/#feat=queryselector), `querySelector` has a 94.61% global support rate, so it should be safe for most people.
+Vanilla FitVids uses `document.querySelector` which is supported in newer browsers. According to [Can I Use](http://caniuse.com/#feat=queryselector), `querySelector` has a 94.61% global support rate, so it should be safe for most people. I've only tested this in Chrome 26, Firefox 19, and Safari 6.
 
 - Firefox 3.5+
 - Chrome 4+
