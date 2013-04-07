@@ -65,7 +65,11 @@
 			var element = container[i],
 				videos = element.querySelectorAll(selectors.join(','));
 
-			if(videos.length > 0) allVideos.push(videos[0]);
+			if(videos.length > 0) {
+				for(var j=0;j<videos.length;j++) {
+					allVideos.push(videos[j]);	
+				}
+			}
 	 	}
 
 
