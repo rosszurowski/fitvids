@@ -1,3 +1,10 @@
+/**
+* Vanilla FitVids v1.0.0
+* Let your videos be fluid.
+* http://github.com/rosszurowski/vanilla-fitvids/
+*
+* Licensed under the WTFPL license
+*/
 ;(function(w, undefined) {
 
 	'use strict';
@@ -5,9 +12,9 @@
 	w.fitVids = function(selector, options) {
 
 		// get the video container, and stop if it doesn't exist.
-		var container = document.querySelectorAll(selector)[0];
+		var container = document.querySelectorAll(selector);
 		if(!container) return;
-		
+
 		var settings = {
 			customSelector: null	
 		};
@@ -51,9 +58,18 @@
 
 		if(settings.customSelector) selectors.push(settings.customSelector);
 
+		var allVideos = [];
 
-		var allVideos = container.querySelectorAll(selectors.join(','));
+		// loop through container matches and grab all the videos.
+		for(var i=0; i<container.length; i++) {
+			var element = container[i],
+				videos = element.querySelectorAll(selectors.join(','));
 
+			if(videos.length > 0) allVideos.push(videos[0]);
+	 	}
+
+
+		// loop through all the videos and 
 		for(var i=0; i<allVideos.length; i++) {
 			var element = allVideos[i];
 			if(element.tagName.toLowerCase() === 'embed' && element.parentNode.tagName === 'object' || /fluid-width-video-wrapper/.test(element.parentNode.className)) { return; }
