@@ -1,5 +1,5 @@
 /**
-* Vanilla FitVids v1.0.0
+* Vanilla FitVids v0.1.0
 * Let your videos be fluid.
 * http://github.com/rosszurowski/vanilla-fitvids/
 *
