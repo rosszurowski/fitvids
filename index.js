@@ -35,9 +35,13 @@ module.exports = function (selector, opts) {
 		videoSelector = videoSelector + ',' + customSelector
 	}
 
-	containers.forEach(function (container) {
-		queryAll(container, videoSelector).forEach(wrap)
-	})
+	for (var i = 0, l = containers.length; i < l; i++) {
+		var container = containers[i]
+		var videos = queryAll(container, videoSelector)
+		for (var j = 0, ll = videos.length; j < ll; j++) {
+			wrap(videos[j])
+		}
+	}
 }
 
 function queryAll (el, selector) {
