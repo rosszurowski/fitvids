@@ -1,6 +1,6 @@
 {
   "name": "fitvids",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Makes your videos fluid-width.",
   "main": "index.js",
   "scripts": {
