@@ -35,16 +35,16 @@ fitvids('.video-container')
 By default, fitvids automatically wraps Youtube, Vimeo, and Kickstarter players, but if you'd like it to wrap others too, you can pass them in as selectors via the `players` property.
 
 ```javascript
-fitvids('.video-container', {
-	players: ['iframe[src*="example1.com"]', 'iframe[src*="example2.com"]']
+fitvids({
+	players: 'iframe[src*="example.com"]'
 })
 ```
 
-Or
+Or several at once:
 
 ```javascript
-fitvids({
-	players: 'iframe[src*="example.com"]'
+fitvids('.video-container', {
+	players: ['iframe[src*="example1.com"]', 'iframe[src*="example2.com"]']
 })
 ```
 
