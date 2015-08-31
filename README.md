@@ -1,38 +1,78 @@
-Vanilla FitVids
-===============
+# fitvids
 
-A fork of Dave Rupert's [FitVids.js](https://github.com/davatron5000/FitVids.js) without any frameworks.
+Lets your videos be responsive by keeping an [intrinsic aspect ratio](http://alistapart.com/article/creating-intrinsic-ratios-for-video).
 
-FitVids.js lets you get fluid width videos in a responsive web design by keeping an intrinsic aspect ratio.
+This module is based heavily off of Dave Rupert's [FitVids jQuery plugin](https://github.com/davatron5000/FitVids.js).
 
+## Install
 
-How to use it
--------------
-
-Just include the fitvids.js script in your code and call it.
-
-
-    
-```html
-	<script src="path/to/fitvids.js"></script>
-    <script>
-    	window.onload = function() {
-    		fitVids('#video-container');
-    	}
-    </script>
+```bash
+npm install fitvids --save
 ```
-    
-This wraps the video(s) in a `div.fluid-width-video-wrapper` uses CSS to keep the proper ratio for the video.
+
+You can also [download the files manually](https://raw.githubusercontent.com/rosszurowski/vanilla-fitvids/master/fitvids.min.js) and include them via a `<script>` tag.
+
+## Usage
+
+```javascript
+fitvids() // Bam, done.
+```
+
+The module exports a single function. Just call it, and it'll wrap all your videos. By default it applies to any videos on the page.
+
+## Options
+
+#### Custom Selector
+
+If you'd prefer to limit this to a single element, you can call fitvids with an optional selector:
+
+```javascript
+fitvids('.video-container')
+```
+
+#### Custom Players
+
+By default, fitvids automatically wraps Youtube, Vimeo, and Kickstarter players, but if you'd like it to wrap others too, you can pass them in as selectors via the `players` property.
+
+```javascript
+fitvids('.video-container', {
+	players: ['iframe[src*="example1.com"]', 'iframe[src*="example2.com"]']
+})
+```
+
+Or
+
+```javascript
+fitvids({
+	players: 'iframe[src*="example.com"]'
+})
+```
+
+#### Ignoring
+
+If there's certain videos you'd like to be ignored, you can pass those in as an option via the `ignore` property.
+
+```javascript
+fitvids({
+	ignore: '.a-special-video'
+})
+```
+
+### How it works
 
 
-Browser Support
--------------
 
-Vanilla FitVids uses `document.querySelector` which is supported in newer browsers. According to [Can I Use](http://caniuse.com/#feat=queryselector), `querySelector` has a 94.61% global support rate, so it should be safe for most people. I've only tested this in Chrome 26, Firefox 19, and Safari 6.
+### Browser Support
 
-- Firefox 3.5+
-- Chrome 4+
-- Opera 10+
-- IE 8+
-- Safari 3.1+
-- Safari iOS 3.2+
+This module uses `document.querySelector` which is supported in newer browsers. According to [Can I Use](http://caniuse.com/#feat=queryselector), `querySelector` has a 94.61% global support rate, so it should be safe for most people.
+
+* Firefox 3.5+
+* Chrome 4+
+* Opera 10+
+* IE 8+
+* Safari 3.1+
+* Safari iOS 3.2+
+
+### License
+
+[WTFPL](http://www.wtfpl.net)
