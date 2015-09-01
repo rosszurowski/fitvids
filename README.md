@@ -48,20 +48,6 @@ fitvids('.video-container', {
 })
 ```
 
-#### Ignoring
-
-If there's certain videos you'd like to be ignored, you can pass those in as an option via the `ignore` property.
-
-```javascript
-fitvids({
-	ignore: '.a-special-video'
-})
-```
-
-### How it works
-
-
-
 ### Browser Support
 
 This module uses `document.querySelector` which is supported in newer browsers. According to [Can I Use](http://caniuse.com/#feat=queryselector), `querySelector` has a 94.61% global support rate, so it should be safe for most people.
