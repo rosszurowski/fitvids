@@ -24,9 +24,7 @@ test('wraps videos in fluid wrapper', function (t) {
 	t.equal(wrapper.style.paddingTop, '56.25%', 'aspect ratio preserved')
 	t.equal(video.src, 'https://www.youtube.com/embed/Bfk83WZcAI4', 'source doesn\'t change')
 	t.equal(video.parentNode.className, 'fluid-width-video-wrapper', 'wrapped in fluid container')
-
 	document.body.removeChild(wrapper)
-
 	t.end()
 })
 
@@ -48,7 +46,6 @@ test('wraps all default selectors', function (t) {
 
 	t.notEqual(extra.parentNode.className, 'fluid-width-video-wrapper', 'didn\'t wrap unknown video selector')
 	document.body.removeChild(extra)
-
 	t.end()
 })
 
@@ -60,6 +57,17 @@ test('allows custom players', function (t) {
 	})
 
 	t.equal(video.parentNode.className, 'fluid-width-video-wrapper', 'wrapped in fluid container')
+	document.body.removeChild(video.parentNode)
+	t.end()
+})
+
+test('doesn\'t wrap videos multiple times', function (t) {
+	var video = player('http://player.vimeo.com/video/118801020')
+	fitvids()
+	fitvids()
+	t.equal(video.parentNode.className, 'fluid-width-video-wrapper', 'wrapped in fluid container')
+	t.equal(video.parentNode.parentNode.tagName, 'BODY', 'not wrapped twice')
+	document.body.removeChild(video.parentNode)
 	t.end()
 })
 
