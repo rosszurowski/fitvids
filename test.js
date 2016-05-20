@@ -31,8 +31,7 @@ test('wraps videos in fluid wrapper', function (t) {
 test('wraps all default selectors', function (t) {
 	var defaults = [
 		player('https://www.youtube.com/embed/Bfk83WZcAI4'),
-		player('http://player.vimeo.com/video/118801020'),
-		player('https://www.kickstarter.com/projects/181236819/no-2-story-of-the-pencil-documentary/widget/video.html')
+		player('http://player.vimeo.com/video/118801020')
 	]
 
 	var extra = player('http://localhost/')

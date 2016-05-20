@@ -5,3 +5,4 @@ npm-debug.log
 
 # OS X scraps
 .DS_Store
+.idea
