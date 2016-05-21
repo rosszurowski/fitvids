@@ -26,7 +26,7 @@ YouTube       | ✓
 Vimeo         | ✓
 Kickstarter   | ✓
 
-_Other video players can be supported by passing a custom selector via [the options](#custom-selector)_
+_Other video players can be supported by passing a custom selector via [the options](#custom-players)_
 
 ## Options
 
@@ -58,7 +58,13 @@ fitvids('.video-container', {
 
 #### Ignoring Selectors
 
-If you'd like to ignore one of the [default selectors]()
+If you'd like to ignore one of the [default selectors](#usage), you can pass a selector via the `ignore` option:
+
+```javascript
+fitvids({
+	ignore: ['object']
+})
+```
 
 ### Browser Support
 
