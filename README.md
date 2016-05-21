@@ -18,13 +18,21 @@ You can also [download the files manually](https://raw.githubusercontent.com/ros
 fitvids() // Bam, done.
 ```
 
-The module exports a single function. Just call it, and it'll wrap all your videos. By default it applies to any videos on the page.
+The module exports a single function. Just call it, and it'll wrap all your videos. By default it applies to video embeds from the following sites.
+
+Player        | Default?
+--------------|-----------
+YouTube       | ✓
+Vimeo         | ✓
+Kickstarter   | ✓
+
+_Other video players can be supported by passing a custom selector via [the options](#custom-selector)_
 
 ## Options
 
 #### Custom Selector
 
-If you'd prefer to limit this to a single element, you can call fitvids with an optional selector:
+If you'd prefer to limit fitvids to a single element, you can provide an optional parent selector:
 
 ```javascript
 fitvids('.video-container')
@@ -48,16 +56,19 @@ fitvids('.video-container', {
 })
 ```
 
+#### Ignoring Selectors
+
+If you'd like to ignore one of the [default selectors]()
+
 ### Browser Support
 
 This module uses `document.querySelector` which is supported in newer browsers. According to [Can I Use](http://caniuse.com/#feat=queryselector), `querySelector` has a 94.61% global support rate, so it should be safe for most people.
 
-* Firefox 3.5+
 * Chrome 4+
-* Opera 10+
-* IE 8+
+* Firefox 2+
+* IE 9+
 * Safari 3.1+
-* Safari iOS 3.2+
+* Safari Mobile 3.2+
 
 ### License
 
