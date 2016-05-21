@@ -76,6 +76,22 @@ This module uses `document.querySelector` which is supported in newer browsers. 
 * Safari 3.1+
 * Safari Mobile 3.2+
 
+### Contributing
+
+Feel free to make issues or pull requests with bug reports or suggestions.
+
+When contributing code, you can run tests via:
+
+```
+make test
+```
+
+To build distributable versions of the script, run:
+
+```
+make build
+```
+
 ### License
 
 [WTFPL](http://www.wtfpl.net)
