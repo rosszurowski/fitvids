@@ -4,6 +4,7 @@
   "description": "Makes your videos fluid-width.",
   "main": "index.js",
   "scripts": {
+    "build": "make build",
     "test": "make test"
   },
   "devDependencies": {
