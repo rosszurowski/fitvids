@@ -10,7 +10,7 @@ This module is based heavily off of Dave Rupert's [FitVids jQuery plugin](https:
 npm install fitvids --save
 ```
 
-You can also [download the files manually](https://raw.githubusercontent.com/rosszurowski/vanilla-fitvids/master/fitvids.min.js) and include them via a `<script>` tag.
+You can also [download the files manually](https://raw.githubusercontent.com/rosszurowski/vanilla-fitvids/master/dist/fitvids.min.js) and include them via a `<script>` tag.
 
 ## Usage
 
