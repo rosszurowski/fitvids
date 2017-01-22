@@ -62,13 +62,7 @@ fitvids({
 
 ### Browser Support
 
-This module uses ES5 Array methods (`Array#filter`, `Array#map`) and `querySelector`. Fitvids support browsers that support these features, or any browser with these features polyfilled. This includes following browsers are supported:
-
-* Chrome
-* Firefox
-* IE 9+
-* Safari 3.1+
-* Safari Mobile 3.2+
+This module supports every modern browser. It uses [ES5 Array methods](http://caniuse.com/#feat=es5) and [`querySelector`](http://caniuse.com/#feat=queryselector). If you need to use fitvids on a legacy browser, fitvids will work as long as these features are polyfilled.
 
 ### Contributing
 
@@ -76,13 +70,13 @@ Feel free to make issues or pull requests with bug reports or suggestions.
 
 When contributing code, you can run tests via:
 
-```bash
+```
 make test
 ```
 
 To build distributable versions of the script, run:
 
-```bash
+```
 make build
 ```
 
