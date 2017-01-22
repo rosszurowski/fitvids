@@ -1,6 +1,6 @@
 # fitvids
 
-Lets your videos be responsive by keeping an [intrinsic aspect ratio](http://alistapart.com/article/creating-intrinsic-ratios-for-video).
+Lets your videos be responsive by wrapping them in an [aspect ratio container](http://alistapart.com/article/creating-intrinsic-ratios-for-video).
 
 This module is based heavily off of Dave Rupert's [FitVids jQuery plugin](https://github.com/davatron5000/FitVids.js).
 
@@ -18,21 +18,15 @@ You can also [download the files manually](https://raw.githubusercontent.com/ros
 fitvids() // Bam, done.
 ```
 
-The module exports a single function. Just call it, and it'll wrap all your videos. By default it applies to video embeds from the following sites.
+The module exports a single function. Just call it, and it'll wrap video embeds from Youtube, Vimeo, and Kickstarter in a responsive container. Other video players can be supported by passing a custom selector via [the options](#custom-players).
 
-Player        | Default?
---------------|-----------
-YouTube       | ✓
-Vimeo         | ✓
-Kickstarter   | ✓
-
-_Other video players can be supported by passing a custom selector via [the options](#custom-players)_
+To wrap videos that have been added to the page dynamically, just call the function again. Fitvids is smart enough to only wrap the new videos.
 
 ## Options
 
-#### Custom Selector
+#### Container Selector
 
-If you'd prefer to limit fitvids to a single element, you can provide an optional parent selector:
+To only wrap videos in a certain container, you can provide an optional container selector:
 
 ```javascript
 fitvids('.video-container')
@@ -44,7 +38,7 @@ By default, fitvids automatically wraps Youtube, Vimeo, and Kickstarter players,
 
 ```javascript
 fitvids({
-	players: 'iframe[src*="example.com"]'
+  players: 'iframe[src*="example.com"]'
 })
 ```
 
@@ -52,7 +46,7 @@ Or several at once:
 
 ```javascript
 fitvids('.video-container', {
-	players: ['iframe[src*="example1.com"]', 'iframe[src*="example2.com"]']
+  players: ['iframe[src*="example1.com"]', 'iframe[src*="example2.com"]']
 })
 ```
 
@@ -62,16 +56,16 @@ If you'd like to ignore one of the [default selectors](#usage), you can pass a s
 
 ```javascript
 fitvids({
-	ignore: ['object']
+  ignore: ['object']
 })
 ```
 
 ### Browser Support
 
-This module uses `document.querySelector` which is supported in newer browsers. According to [Can I Use](http://caniuse.com/#feat=queryselector), `querySelector` has a 94.61% global support rate, so it should be safe for most people.
+This module uses ES5 Array methods (`Array#filter`, `Array#map`) and `querySelector`. Fitvids support browsers that support these features, or any browser with these features polyfilled. This includes following browsers are supported:
 
-* Chrome 4+
-* Firefox 2+
+* Chrome
+* Firefox
 * IE 9+
 * Safari 3.1+
 * Safari Mobile 3.2+
@@ -82,13 +76,13 @@ Feel free to make issues or pull requests with bug reports or suggestions.
 
 When contributing code, you can run tests via:
 
-```
+```bash
 make test
 ```
 
 To build distributable versions of the script, run:
 
-```
+```bash
 make build
 ```
 
