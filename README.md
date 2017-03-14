@@ -26,11 +26,13 @@ To wrap videos that have been added to the page dynamically, just call the funct
 
 #### Container Selector
 
-To only wrap videos in a certain container, you can provide an optional container selector:
+To only wrap videos that are a child of an element, you can provide an optional selector:
 
 ```javascript
 fitvids('.video-container')
 ```
+
+Only videos that are descendants of `.video-container` will be made responsive.
 
 #### Custom Players
 
