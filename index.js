@@ -6,10 +6,11 @@ var selectors = [
 	'iframe[src*="youtube.com"]',
 	'iframe[src*="youtube-nocookie.com"]',
 	'iframe[src*="kickstarter.com"][src*="video.html"]',
-	'object'
+  'object',
+  'video'
 ]
 
-var css = '.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}'
+var css = '.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed,.fluid-width-video-wrapper video {position:absolute;top:0;left:0;width:100%;height:100%;}'
 
 module.exports = function (parentSelector, opts) {
 	parentSelector = parentSelector || 'body'
