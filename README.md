@@ -54,7 +54,7 @@ fitvids('.video-container', {
 
 #### Ignoring Selectors
 
-If you'd like to ignore one of the [default selectors](#usage), you can pass a selector via the `ignore` option:
+If you'd like to ignore certain videos, you can pass a selector via the `ignore` option:
 
 ```javascript
 fitvids({
