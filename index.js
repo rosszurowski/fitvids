@@ -9,7 +9,7 @@ var selectors = [
 var css =
   ".fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}";
 
-export default function(parentSelector, opts) {
+module.exports = function(parentSelector, opts) {
   parentSelector = parentSelector || "body";
   opts = opts || {};
 
