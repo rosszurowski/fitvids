@@ -1,6 +1,6 @@
 {
   "name": "fitvids",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Makes your videos fluid-width.",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,8 @@
     "hihat": "^2.6.4",
     "tap-dev-tool": "^1.3.0",
     "tape": "^4.2.0",
-    "uglify-js": "^2.4.24"
+    "uglify-js": "^2.4.24",
+    "xo": "^0.25.3"
   },
   "keywords": [
     "video",
